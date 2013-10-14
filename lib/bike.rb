@@ -2,7 +2,7 @@ class Bike
 
 	#the initialize method is always called when you create a new
 	#class by typipng Bike.new
-	def initialize
+	def fix
 		#all instance variables begin with "@"
 		#this must be an instance variable because we'll need it
 		#in other methods
@@ -15,10 +15,6 @@ class Bike
 
 	def break
 		@broken = true
-	end
-
-	def fix
-		@broken = false
 	end
 
 end
