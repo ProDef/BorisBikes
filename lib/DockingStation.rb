@@ -1,9 +1,16 @@
 class DockingStation
 
-def bike_count
-	0
+def initialize
+	@bikes = []
 end
 
+def bike_count
+	@bikes.count
+end
+
+def dock(bike)
+	@bikes << bike 
+end
 
 
 end
