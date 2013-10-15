@@ -1,5 +1,5 @@
 # link to the Bike class
-require '../lib/bike'
+require 'bike'
 
 
 #we're describing the functionality of a class, Bike
