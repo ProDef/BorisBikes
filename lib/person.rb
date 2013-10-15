@@ -12,8 +12,17 @@ class Person
 		@bike != nil
 	end
 
-	def return_bike
+	def return_rented_bike(station)
 		@bike = station.dock
 	end
+
+	def break_a_bike
+		@bike.break
+	end
+
+	def has_no_bike?
+		@bike != nil
+	end
+
 
 end
