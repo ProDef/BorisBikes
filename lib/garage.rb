@@ -12,6 +12,7 @@ class Garage
 	end
 
 	def dock(bike)
+		raise "Station is full" if full?
 		@bikes << bike 
 	end
 
@@ -19,9 +20,13 @@ class Garage
 		@bikes.pop
 	end
 
+	def full?
+		bike_count == @capacity
+	end
 
-
-
+	def fix_bike(bike)
+		bike.fix
+	end
 
 
 
