@@ -9,7 +9,7 @@ class Person
 	end
 
 	def has_bike?
-		@bike != nil
+		!@bike.nil?
 	end
 
 	def return_rented_bike(station)
@@ -21,7 +21,7 @@ class Person
 	end
 
 	def has_no_bike?
-		@bike != nil
+		@bike.nil?
 	end
 
 

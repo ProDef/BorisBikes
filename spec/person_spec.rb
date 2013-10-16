@@ -1,5 +1,4 @@
 require 'person'
-require 'bike'
 
 describe Person do
 	it "can rent a bike from the station" do 
@@ -37,22 +36,4 @@ describe Person do
 
 		person.break_a_bike
 	end
-
-
-
-
-
-
 end
-
-
-
-
-
-
-
-
-
-
-
-

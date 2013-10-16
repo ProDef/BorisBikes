@@ -1,5 +1,4 @@
 require 'docking_station'
-require 'bike'
 
 describe DockingStation do 
  
@@ -21,7 +20,7 @@ describe DockingStation do
 
 	it "should release a bike" do 
 		station.dock(bike)
-		station.release(bike)
+		station.release_bike
 		expect(station.bike_count).to eq(0)
 	end
 
@@ -43,6 +42,4 @@ describe DockingStation do
 		station.dock(broken_bike)
 		expect(station.available_bikes).to eq([working_bike])
 	end
-
-
 end
