@@ -42,4 +42,5 @@ describe DockingStation do
 		station.dock(broken_bike)
 		expect(station.available_bikes).to eq([working_bike])
 	end
+
 end
