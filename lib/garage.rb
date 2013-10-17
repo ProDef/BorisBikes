@@ -28,6 +28,13 @@ class Garage
 		bike.fix
 	end
 
+	def available_bikes
+		@bikes.reject {|bike| bike.broken?}
+	end
 
+	def release_fixed_bikes
+		fixed_bikes =available_bikes
+		fixed_bikes.pop
+	end
 
 end
