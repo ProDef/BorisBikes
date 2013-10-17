@@ -39,6 +39,19 @@ let(:storage) {Garage.new }
 		expect(bike).not_to be_broken
 	end
 
+	it "should provide a list of available bikes" do
+		working_bike, broken_bike = Bike.new, Bike.new
+		broken_bike.break
+		storage.dock(working_bike)
+		expect(storage.available_bikes).to eq [working_bike]
+	end
 
-
+	it "should release a bike if it is fixed" do 
+		broken_bike = Bike.new
+		broken_bike.break
+		storage.dock(broken_bike)
+		storage.release_fixed_bikes
+		expect(storage.bike_count).to eq(1)
+	end
+	
 end
